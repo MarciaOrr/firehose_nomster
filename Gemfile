@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Gems added for Firehost Project nomster web application
+gem 'rails_12factor', group: :production
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
