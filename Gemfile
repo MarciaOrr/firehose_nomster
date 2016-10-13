@@ -8,6 +8,11 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
+#Added 12Oct2016. Pagination Challenge for Nomster
+gem 'will_paginate', '~> 3.1.1'
+
+# Added 13Oct2016.
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
