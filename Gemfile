@@ -14,6 +14,12 @@ gem 'will_paginate', '~> 3.1.1'
 # Added 13Oct2016.
 gem 'simple_form'
 
+# Added 14Oct2016 - Overview Step 5. User Authentication
+gem 'devise', '>= 3.2.4'
+
+
+
+# -----     ----- DEFAULT from 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
 # Use postgresql as the database for Active Record
