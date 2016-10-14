@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Custom additions, modifications for Nomster
-  config.action_mailer default_url_options = { host: 'nomster-marcia-orr.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'nomster-marcia-orr.herokuapp.com'}
   
 
   # Settings specified here will take precedence over those in config/application.rb.
