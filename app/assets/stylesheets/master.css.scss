@@ -2,6 +2,8 @@
 @import "bootstrap";
 
 /* ----- CLASSES ----- */
+
+/* --- Top Navigation Bar --- */
 .navbar.navbar-inverse {
   background: url('/assets/blue023.jpg');
   border-radius: 0;
@@ -27,11 +29,21 @@
   color: #ff3333;
 }
 .nav.navbar-nav.navbar-right li a{
+  /* Sign In, Sign Up --- */
   color: #e6e6e6;
-  font-family: 'fontinitalic', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 18px;
 }
 
+/* ALL buttons - Create and Sign in */
+.btn {
+  background-color: #0000ff;
+  border-color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* --- Places Box, User Sign In --- */
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -42,6 +54,37 @@
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+}
+
+/* Log In Page Specific Styles */
+.booyah-box h2 {
+  color: #0000ff;
+  font-family: 'fontin_smallcapssmallcaps', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px #ff3333;
+}
+
+.login_text {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+}
+.email, .password {
+  color: #0000ff;
+  margin-top: 5px;
+}
+#user_email, #user_password {
+  color: black;
+}
+
+.login_text a {
+  color: #0000e6;
+}
+
+/* --- Alerts --- */
+.alert-danger {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 
