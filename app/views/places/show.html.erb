@@ -3,8 +3,6 @@
   <i><%= @place.address %></i><br /><br />
   <p><%= @place.description %></p><br />
 
-  <p>'Latitude: '<%=@place.latitude%> 'Longitude: '<%=@place.longitude%></p>
-
   <% if @place.latitude.present? && @place.longitude.present? %>
     <script>
       function initMap() {
@@ -22,15 +20,14 @@
         });
       }
     </script>
-  <% end %>
-
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN5t_d7HgD6cQ0332SDtKFLCrd6NcFVX8 &callback=initMap">
-  </script>
-
-  <div id='map'></div>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN5t_d7HgD6cQ0332SDtKFLCrd6NcFVX8 &callback=initMap">
+    </script>
+    <div id='map'></div>
+   <% end %>
 
   <br />
+ 
   <div class='pull-right'>
   <% if current_user && current_user == @place.user %>
     <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
