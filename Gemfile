@@ -17,6 +17,10 @@ gem 'simple_form'
 # Added 14Oct2016 - Overview Step 5. User Authentication
 gem 'devise', '>= 3.2.4'
 
+# Added 18Cot2016 - Step 29: Geocoding address
+gem 'geocoder', '1.3.4'
+gem 'figaro', '>= 1.0.0'
+
 
 
 # -----     ----- DEFAULT from 

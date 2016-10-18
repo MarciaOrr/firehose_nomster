@@ -1,5 +1,10 @@
 class Place < ActiveRecord::Base
     belongs_to :user
+
+    geocoded_by :address
+    after_validation :geocode
+
+
     validates :name, presence: true,
                      length: { maximum: 60, minimum: 3 },
                      uniqueness: { case_sensitive: false, message: 'Place Name already taken. It must be unique.' }            
