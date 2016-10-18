@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'places#index'
 
-  resources  :places
+  resources  :places do
+    resources :comments, only: :create
+  end
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
