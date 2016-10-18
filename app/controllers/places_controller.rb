@@ -28,28 +28,28 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
 
     if @place.user != current_user
-      return render text: 'Not Allowed', status: :forbidden
+      render file: Rails.root.join('public','403_forbidden.html'), status: :not_found, layout: false
     end
   end
 
   def update
     @place = Place.find(params[:id])
     if @place.user != current_user
-      return render text: 'Not Allowed', status: :forbidden
+      return render text: 'Update Forbidden', status: :forbidden
     end
 
     @place.update_attributes(place_params)
     if @place.valid?
       redirect_to root_path
     else
-      render :edit, status: :unprocessable_entity
+      return render text: 'Update Forbidden', status: :unprocessable_entity
     end
   end
 
   def destroy
     @place = Place.find(params[:id])
     if @place.user != current_user
-      return render text: 'Not Allowed', status: :forbidden
+      return render text: 'Destroy Forbidden', status: :unprocessable_entity
     end
     @place.destroy
     redirect_to root_path
