@@ -35,7 +35,7 @@ class PlacesController < ApplicationController
   def update
     @place = Place.find(params[:id])
     if @place.user != current_user
-      return render text: 'Update Forbidden', status: :forbidden
+      return render text: 'You are not the owner of this place', status: :forbidden
     end
 
     @place.update_attributes(place_params)
