@@ -42,6 +42,14 @@
   font-size: 16px;
   font-weight: bold;
 }
+.btn.btn-default {
+  color: #0000ff;
+  background-color: #f2f2f2;
+  border-color: #0000ff;
+  border: 2px solid #0000ff;
+
+
+}
 
 /* --- Places Box, User Sign In --- */
 .booyah-box {
@@ -99,6 +107,11 @@
 /* --- ID's --- */
 #map {
   height: 300px;
+}
+
+#comment_rating {
+  font-size: 24px;
+  font-family: 'fontinbold', sans-serif;
 }
 
 /* ----- TAGS ----- */
