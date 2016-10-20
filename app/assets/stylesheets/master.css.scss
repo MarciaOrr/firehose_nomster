@@ -62,12 +62,13 @@
   margin-bottom: 15px;
   padding: 20px;
 }
-
-/* Log In Page Specific Styles */
 .booyah-box h2 {
   color: #ff3333;
   font-family: 'fontin_smallcapssmallcaps', sans-serif;
   font-weight: bold;
+}
+.booyah-box p {
+  font-size: 16px;
 }
 
 .login_text {
@@ -132,6 +133,7 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
+  font-size: 14px;
 }
 blockquote:before {
   color: #ccc;
@@ -145,7 +147,7 @@ blockquote p {
   display: inline;
 }
 blockquote b {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .clear {

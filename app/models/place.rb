@@ -11,4 +11,8 @@ class Place < ActiveRecord::Base
                      uniqueness: { case_sensitive: false, message: 'Place Name already taken. It must be unique.' }            
     validates :address, presence: true, length: { maximum: 140, minimum: 3 }
     validates :description, presence: true, length: { maximum: 500, minimum: 10}
+
+    def last_comment
+      self.comments.order("id ASC").last
+    end
 end
