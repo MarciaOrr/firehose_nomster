@@ -104,6 +104,15 @@
   padding: 8px;
 }
 
+/* --- Map and Photos Containers on places index page --- */
+.map-container, .photo-container {
+  padding-bottom: 20px;
+}
+.place-photo-comment {
+  margin-top: 16px;
+}
+
+
 /* --- ID's --- */
 #map {
   height: 300px;
