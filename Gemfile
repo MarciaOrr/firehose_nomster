@@ -24,6 +24,9 @@ gem 'figaro', '>= 1.0.0'
 # Added 20Oct2016 - Photo Challenge
 gem 'carrierwave', '>= 1.0.0.beta','< 2.0'
 
+# Added 27Oct2016 - Photo Challenge. Connect CarrierWave to Amazon Web Services
+gem 'fog'
+
 
 
 # -----     ----- DEFAULT from 
