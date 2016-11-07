@@ -33,18 +33,17 @@
 
 <!-- Source: BlackrockDigital/startbootstrap-thumbnail-gallery -->
   <div class='photo-container col-xs-12'>
-
       <% @place.photos.each do |photo| %>
         <div class='col-sm-6 col-md-4'>
           <a class='thumbnail' href='#'>
-            <img src='<%= photo.picture %>' class='img-responsive' alt='Responsive image'>
+            <img src='<%= photo.picture %>' class='img-responsive' alt='Responsive image'
+                          style="width:260px">
           </a>
           <div class='photo-label'>
             <%= photo.caption %>
           </div>
         </div>
       <% end %>
-
   </div>   <!-- photo-container -->
   <div class='clear'></div>
 

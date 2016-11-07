@@ -104,10 +104,15 @@
   padding: 8px;
 }
 
-/* --- Map and Photos Containers on places index page --- */
+/* --- Map and Photos Containers on places and index pages --- */
 .map-container, .photo-container {
   padding-bottom: 20px;
 }
+.photo-container .thumbnail {
+  margin-bottom: 5px;   /* override margin-bottom: 20px default for .thumbnail ;
+  padding: 0 px;        /* padding set to 15px right and left for cols-sm-6 */
+}
+
 .place-photo-comment {
   margin-top: 16px;
 }
