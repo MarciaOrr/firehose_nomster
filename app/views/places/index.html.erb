@@ -12,7 +12,7 @@
     <div class='place-photo-comment col-xs-12'>
       <% if place.photos.present? %>
         <div class='col-xs-4'>
-          <img src='<%= place.photos.last.picture %>' class='img-responsive' alt='Responsive image' style="width:260px">
+          <img src='<%= place.photos.last.picture %>' class='img-responsive' alt='Last Place Photo' style="width:260px">
         </div>
         <% if place.comments.present? %>
           <div class='col-xs-8'>
@@ -42,9 +42,23 @@
   </div>
 <% end %>
 
-
 <hr />
 <div class='digg_pagination'>
   <%= will_paginate @places %>
 </div>
 
+<hr />
+<div class='footer'>
+  <div class='container'>
+    <div class='col-xs-1 dog-paw'>
+      <img src = '/assets/coDogPaw_toEdit.jpg' class='img-responsive' alt='CO Dog Paw'>
+    </div>
+    <div class='col-xs-10 footer-blurb'>
+      <h1>Recommendations and Warnings for your Colorado Canine<br /></h1>
+      <p>The Firehose Project Web App NOMSTER - <a href='http://thefirehoseproject.com'>thefirehoseproject.com</a></p>
+    </div>
+    <div class='col-xs-1 dog-paw'>
+      <img src = '/assets/coDogPaw_toEdit.jpg' class='img-responsive' alt='CO Dog Paw'>
+    </div>
+  </div>
+</div>
