@@ -9,10 +9,11 @@
     <% end %>
     <div class='clear'></div>
 
+    <!-- last_photo and last_comment defined in place.rb -->
     <div class='place-photo-comment col-xs-12'>
       <% if place.photos.present? %>
         <div class='col-xs-4'>
-          <img src='<%= place.photos.last.picture %>' class='img-responsive' alt='Last Place Photo' style="width:260px">
+          <img src='<%= place.last_photo.picture %>' class='img-responsive' alt='Last Place Photo' style="width:260px">
         </div>
         <% if place.comments.present? %>
           <div class='col-xs-8'>

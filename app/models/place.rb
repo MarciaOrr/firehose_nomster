@@ -16,4 +16,8 @@ class Place < ActiveRecord::Base
     def last_comment
       self.comments.order("id ASC").last
     end
+
+    def last_photo
+      self.photos.order("id ASC").last
+    end
 end
