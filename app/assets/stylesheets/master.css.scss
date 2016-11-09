@@ -8,6 +8,7 @@
   background: url('/assets/blue023.jpg');
   border-radius: 0;
   box-shadow: 0px 1px 3px #2a2a2a;
+  margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
@@ -48,6 +49,35 @@
   background-color: #f2f2f2;
   border-color: #0000ff;
   border: 2px solid #0000ff;
+}
+
+/*--- Carousel Slider --- */
+.carousel {
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  max-height: 300px;
+  width: 80%;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.carousel-caption {
+  color: white;
+  font-family: 'fontin_regular', sans-serif;
+  font-size: 24px;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+  background-color: rgba(0,0,0,0.25);
+  width: 100%;
+  position: relative;
+  left:0;
+
+  padding: 0;
+}
+
+.carousel-control .glyphicon {
+  font-size: 60px;
 }
 
 /* --- Places Box, User Sign In --- */
