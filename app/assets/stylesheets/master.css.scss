@@ -2,7 +2,6 @@
 @import "bootstrap";
 
 
-
 /* --- Top Navigation Bar --- */
 .navbar.navbar-inverse {
   background: url('/assets/blue023.jpg');
@@ -50,6 +49,12 @@
   border-color: #0000ff;
   border: 2px solid #0000ff;
 }
+
+/* Div wrapper around page content in application.html.erb */
+.content-container {
+  flex: 1 0 auto;
+}
+
 
 /*--- Carousel Slider --- */
 .carousel {
@@ -139,17 +144,6 @@
 }
 
 /* --- Sticky Footer --- */
-.content-wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto 50px;
-  overflow: auto;
-  padding-bottom: 45px;
-}
-
-
-
 .footer-blurb {
   text-align: center;
   color: navy;
@@ -202,8 +196,14 @@ body {
   background: url('/assets/sprinkles.png');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
                "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  /* Flexbox: philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/ */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* stackoverflow.com/questions/17966140/twitter-bootstrap-3-sticky-footer
+    Margin-bottom: = footer height + footer padding-top + footer margin-bottom;
+  */
   margin-bottom: 75px;
-  background: pink;
 }
 
 footer {
@@ -213,7 +213,7 @@ footer {
   height: 45px;
   padding-top: 10px;
   margin-bottom: 20px;
-  background: #ccffcc;
+  flex: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
