@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
 <nav class="navbar navbar-inverse" role="navigation">
@@ -31,7 +32,6 @@
           <% end %>
         </li>
       </ul>
-
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
@@ -41,8 +41,8 @@
         <% end %>
         <li><a href="#">Link</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>   <!-- /.navbar-collapse -->
+  </div>   <!-- /.container-fluid -->
 </nav>
 
 <!-- User Authentication -->
