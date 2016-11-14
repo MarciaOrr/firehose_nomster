@@ -5,10 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
 </head>
 
 <body>
-
+<!-- NAVBAR -->
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -45,6 +46,7 @@
   </div>   <!-- /.container-fluid -->
 </nav>
 
+<div class='container'>
 <!-- User Authentication -->
 <% if notice.present? %>
   <p class='alert alert-info'><%= notice %></p>
@@ -54,6 +56,30 @@
 <% end %>
 
 <%= yield %>
+</div>   <!-- div container wrapping the content -->
+
+
+<!-- http://stackoverflow.com/questions/17966140/twitter-bootstrap-3-sticky-footer -->
+<footer>
+<div class='container'>
+  <div class='col-xs-1'>
+    <span class='dog-paw pull-left'>
+      <img src='/assets/coDogPaw_beige.jpg' class='img-responsive' alt='CO Dog Paw'>
+    </span>
+  </div>
+  <div class='col-xs-10'>
+    <span class='footer-blurb'>
+      <h1>Recommendations and Warnings for your Colorado Canine</h1>
+      <p>The Firehose Project Web App NOMSTER - <a href='http://thefirehoseproject.com'>thefirehoseproject.com</a></p>
+    </span>
+  </div>
+  <div class='col-xs-1'>
+    <span class='dog-paw pull-right'>
+      <img src = '/assets/coDogPaw_beige.jpg' class='img-responsive' alt='CO Dog Paw'>
+    </span>
+  </div>
+</div>   <!-- container -->
+</footer>
 
 </body>
 </html>

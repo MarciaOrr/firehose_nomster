@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* ----- CLASSES ----- */
+
 
 /* --- Top Navigation Bar --- */
 .navbar.navbar-inverse {
@@ -138,6 +138,36 @@
   padding: 8px;
 }
 
+/* --- Sticky Footer --- */
+.content-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto 50px;
+  overflow: auto;
+  padding-bottom: 45px;
+}
+
+
+
+.footer-blurb {
+  text-align: center;
+  color: navy;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+.footer-blurb h1 {
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+.footer-blurb p {
+  font-size: 10px;
+}
+
+.dog-paw {
+  padding: 0px;
+}
+
+
 /* --- Map and Photos Containers on places and index pages --- */
 .map-container, .photo-container {
   padding-bottom: 20px;
@@ -163,11 +193,27 @@
 }
 
 /* ----- TAGS ----- */
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
   background: url('/assets/sprinkles.png');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
                "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  margin-bottom: 75px;
+  background: pink;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  background: #ccffcc;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -201,3 +247,4 @@ blockquote b {
 .clear {
   clear: both;
 }
+
