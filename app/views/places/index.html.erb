@@ -1,40 +1,80 @@
-<div id='nomster-carousel' class='carousel slide' data-ride='carousel'>
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#nomster-carousel" data-slide-to='0' class='active'></li>
-    <li data-target="#nomster-carousel" data-slide-to='1'></li>
-    <li data-target="#nomster-carousel" data-slide-to='2'></li>
-    <li data-target="#nomster-carousel" data-slide-to='3'></li>
-  </ol>
+<div id='nomster-carousel-wrapper' class='container-fluid'>
+  <div id='nomster-carousel' class='carousel slide' data-ridr='carousel'>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class='item active'>
-      <img src='/assets/coloradoTrail.jpg' alt="Colorado Trail" class='center-block img-responsive' style='height:300px'>
-      <div class='carousel-caption'>Dogs on the Colorado Trail</div>
-    </div>
-    <div class='item'>
-      <img src='/assets/coloradoDogInT.jpg' alt="Dog in T" class='center-block img-responsive'>
-      <div class='carousel-caption'>Colorado Dog</div>
-    </div>
-    <div class='item'>
-      <img src='/assets/dogsChairlift.jpg' alt="Chairlift Dogs" class='center-block img-responsive'>
-      <div class='carousel-caption'>Ski Dogs</div>
-    </div>
-    <div class='item'>
-      <img src='/assets/brewDogsCo.jpg' alt="Brew Dogs" class='center-block img-responsive'>
-      <div class='carousel-caption'>Dogs and Brews</div>
-    </div>
-  </div>   <!-- carousel-inner -->
+    <!-- Indicators -->
+    <ol class='carousel-indicators'>
+      <li data-target='#nomster-carousel' data-slide-to='0' class='active'></li>
+      <li data-target='#nomster-carousel' data-slide-to='1'></li>
+      <li data-target='#nomster-carousel' data-slide-to='2'></li>
+      <li data-target='#nomster-carousel' data-slide-to='3'></li>
+      <li data-target='#nomster-carousel' data-slide-to='4'></li>
+      <li data-target='#nomster-carousel' data-slide-to='5'></li>
+      <li data-target='#nomster-carousel' data-slide-to='6'></li>
+      <li data-target='#nomster-carousel' data-slide-to='7'></li>
+    </ol>
 
-  <!-- Controls -->
-  <a class='left carousel-control' href='#nomster-carousel' data-slide='prev'>
-    <span class='glyphicon glyphicon-chevron-left'></span>
-  </a>
-  <a class='right carousel-control' href='#nomster-carousel' data-slide='next'>
-    <span class='glyphicon glyphicon-chevron-right'></span>
-  </a>
-</div>   <!-- nomster-carousel carousel slide -->
+    <!-- Wrapper for slides -->
+    <div class='carousel-inner'>
+      <div class='item active'>
+        <div class='col-xs-4'><a href='#'>
+          <img src='/assets/dogsChairlift_modified.jpg' alt='Chairlift Dogs' class='img-responsive'>
+          <div class='carousel-caption'>We came up the easy way</div>
+        </a></div>
+      </div>
+      <div class='item'>
+        <div class='col-xs-4'><a href='#'>
+          <img src='/assets/CoSpringsDogParks_modified.jpg' alt='CoS Dog Parks' class='img-responsive'>
+        </a></div>        
+      </div>
+      <div class='item'>
+        <div class='col-xs-4'><a href='#'>
+          <img src='/assets/dogPlayGroup_modified.jpg' alt='Playing near Mountains' class='img-responsive'>
+          <div class='carousel-caption'>Playing at the base of the Rockies</div>
+        </a></div>      
+      </div>
+      <div class='item'>
+        <div class='col-xs-4'><a href='#'>
+          <img src='/assets/aspen_avalanche_modified.jpg' alt='Avalanche Rescue' class='img-responsive'>
+          <div class='carousel-caption'>Aspen Avalanche Rescue Dog</div>
+        </a></div>
+      </div>      
+      <div class='item'>
+        <div class='col-xs-4'><a href='#'>
+          <img src='/assets/coloradoLabs_modified.jpg' alt='Labs in Colorado' class='img-responsive'>
+          <div class='carousel-caption'>Summer Mountain Hike</div>
+        </a></div>
+      </div>
+      <div class='item'>
+        <div class='col-xs-4'><a href='#'>
+         <img src='/assets/brewDogsCo_modified.jpg' alt='Brew Dogs' class='img-responsive'>          
+        </a></div>
+      </div>
+      <div class='item'>
+        <div class='col-xs-4'><a href='#'>
+          <img src='/assets/coloradoTrail_modified.jpg' alt='Hiking the CO Trail' class='img-responsive'>
+          <div class='carousel-caption'>Bernese Mountain Dogs on the Colorado Trail</div>
+        </a></div>
+      </div>
+      <div class='item'>
+        <div class='col-xs-4'>
+          <img src='/assets/goldenFourteen_modified.jpg' alt='Golden at 14K ft' class='img-responsive'>
+          <div class='carousel-caption'>Top of Colorado: 14,000 Ft</div>
+        </a></div>
+      </div>      
+    </div>   <!-- carousel-inner -->
+
+    <!-- Controls -->
+    <a class='left carousel-control' href='#nomster-carousel' data-slide='prev'>
+      <span class='glyphicon glyphicon-chevron-left'  aria-hidden='true'></span>
+      <span class='sr-only'>Previous</span>
+   </a>
+    <a class='right carousel-control' href='#nomster-carousel' data-slide='next'>
+      <span class='glyphicon glyphicon-chevron-right'  aria-hidden='true'></span>
+      <span class='sr-only'>Next</span>
+    </a>
+
+  </div>   <!-- id: nomster-carousel -->
+</div>   <!-- id: nomster-carousel wrapper -->
 
 <% @places.each do |place| %>
   <div class='booyah-box col-xs-10 col-xs-offset-1'>
@@ -59,7 +99,7 @@
     <div class='place-photo-comment col-xs-12'>
       <% if place.photos.present? %>
         <div class='col-xs-4'>
-          <img src='<%= place.last_photo.picture %>' class='img-responsive' alt='Last Place Photo' style="max-width: 95%">
+          <img src='<%= place.last_photo.picture %>' class='img-responsive' alt='Last Place Photo' style='max-width: 95%'>
         </div>
         <% if place.comments.present? %>
           <div class='col-xs-8'>
@@ -92,6 +132,29 @@
 <div class='digg_pagination'>
   <%= will_paginate @places %>
 </div>
+
+
+<script type='text/javascript'>
+  $('#nomster-carousel').carousel({
+    interval: 4000
+  });
+
+  $('.carousel .item').each(function(){
+    var next = $(this).next();
+    if (!next.length) {
+      next = $(this).siblings(':first');      
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    for (var i=0;i<1;i++) {
+      next = next.next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+    }
+  });
+</script>
 
 
 
