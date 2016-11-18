@@ -56,7 +56,7 @@
         </a></div>
       </div>
       <div class='item'>
-        <div class='col-xs-12 col-sm-6 col-md-4'>
+        <div class='col-xs-12 col-sm-6 col-md-4'><a href='#'>
           <img src='/assets/goldenFourteen_modified.jpg' alt='Golden at 14K ft' class='img-responsive'>
           <div class='carousel-caption'>Top of Colorado: 14,000 Ft</div>
         </a></div>
@@ -135,23 +135,23 @@
 
 
 <script type='text/javascript'>
-  $('#nomster-carousel').carousel({
-    interval: 4000
-  });
+  $('#nomster-carousel').carousel( {interval: false} );
 
   $('.carousel .item').each(function(){
-    var next = $(this).next();
-    if (!next.length) {
-      next = $(this).siblings(':first');      
-    }
-    next.children(':first-child').clone().appendTo($(this));
+    var itemToClone = $(this);
 
-    for (var i=0;i<1;i++) {
-      next = next.next();
-      if (!next.length) {
-        next = $(this).siblings(':first');
+    for (var i=1;i<3;i++) {
+      itemToClone = itemToClone.next();
+
+      // wrap around if at end of item collection
+      if (!itemToClone.length) {
+        itemToClone = $(this).siblings(':first');
       }
-      next.children(':first-child').clone().appendTo($(this));
+
+      // grab item, clone, add marker class, add to collection
+      itemToClone.children(':first-child').clone()
+        .addClass("cloneditem-"+(i))
+        .appendTo($(this));
     }
   });
 </script>

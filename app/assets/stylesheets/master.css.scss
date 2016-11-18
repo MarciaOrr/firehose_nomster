@@ -56,44 +56,158 @@
 }
 
 /*--- Carousel Slider --- */
-.carousel {
+.carousel
+{
   box-shadow: 0px 3px 8px #2a2a2a;
-}
 
-.carousel-indicators li {
-  border: 1px solid #0000ff;
-}
-.carousel-indicators .active {
-  background-color: #0000ff;
-}
+  .carousel-indicators
+  {
+    margin-bottom: 0px;
+    li { border: 1px solid #0000ff; }
+    .active { background-color: #0000ff; }
+  }
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-  /*-- Defaults from stylesheets/bootstrap/_carousel.scss - line 22
-    display: block;
-    max-width: 100%;
-    height: auto;
-    line-height: 1;
-*/
-  max-height: 300px;
-  max-width: 50%;
-  padding-right: 60px;
-  padding-left: 60px;
-}
+  .carousel-control
+  {
+    width: 5%;
+    &.left { margin-left: 150x; }
+    &.right { margin-right: 15px; }
+    .glyphicon { font-size: 60px; }
+  }
+
+  .cloneditem-1, .cloneditem-2 { display: none; }
+
+  .carousel-inner
+  {
+    margin-bottom: 50px;
+
+    > .item img {
+      height: 265px;
+      width: 100%;
+    }
+
+
+    @media all and (min-width: 768px)
+    {
+      @media (transform-3d), (-webkit-transform-3d)
+      {
+        > .item.active.right,
+        > .item.next
+        { 
+          transform: translate3d(50%, 0, 0);  
+          left: 0;
+        }
+
+        > .item.active.left,
+        > .item.prev
+        { 
+          transform: translate3d(-50%, 0, 0);
+          left: 0;
+        }
+
+        > .item.left,
+        > .item.prev.right,
+        > .item.active
+        {
+          transform: translate3d(0, 0, 0);
+          left: 0;
+        }    
+      }    /* @media */
+
+      > .active.left,
+      > .prev
+      {
+        left: -50%;
+      }
+
+      > .active.right,
+      > .next
+      {
+        left:  50%;
+      }
+
+      > .left,
+      > .prev.right,
+      > .active
+      {
+        left: 0;
+      }
+
+      .cloneditem-1 
+      {
+        display: block;
+      }
+    }
+
+    @media all and (min-width: 992px)
+    {    
+      @media (transform-3d), (-webkit-transform-3d)
+      {
+        > .item.active.right,
+        > .item.next
+        { 
+          transform: translate3d(25%, 0, 0);  
+          left: 0;
+        }    
+
+        > .item.active.left,
+        > .item.prev
+        { 
+          transform: translate3d(-25%, 0, 0);
+          left: 0;
+        }
+
+        > .item.left,
+        > .item.prev.right,
+        > .item.active
+        {
+          transform: translate3d(0, 0, 0);
+          left: 0;
+        }
+      }   /* @media */
+      > .active.left,
+      > .prev
+      {
+        left: -25%;
+      }
+
+      > .active.right,
+      > .next
+      {
+        left:  25%;
+      }
+
+      > .left,
+      > .prev.right,
+      > .active
+      {
+        left: 0;
+      }
+
+      .cloneditem-2
+      {
+        display: block;
+      }
+    }    
+  }   /* .carousel-inner */
+
+
+}   /* .carousel */
 
 .carousel-caption {
-  color: white;
-  font-family: 'fontin_regular', sans-serif;
-  font-size: 24px;
-  font-weight: 100;
-  text-shadow: rgba(0,0,0,0.95) 1px 1px;
-  background-color: rgba(0,0,0,0.25);
+  color: black;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: rgba(244,244,215,0.25);
   width: 100%;
-  position: relative;
-  left:0;
-}
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 20px;
+  padding-top: 0;
 
-.carousel-control .glyphicon {
-  font-size: 60px;
+
 }
 
 /* --- Places Box, User Sign In --- */
@@ -150,7 +264,7 @@
 .field_with_errors {
   color: #ff3333;
   background-color: #ffeeee;
-  border-raidus: 3px;
+  border-radius: 3px;
   padding: 8px;
 }
 
