@@ -15,31 +15,31 @@
   }
   
   .digg_pagination .disabled {
-    color: #999999;
-    border: 1px solid #dddddd;
+    color: #999999;                /* medium-dark grey #999999 */
+    border: 1px solid #dddddd;     /* light grey #dddddd */
   }
 
   .digg_pagination .current {
     font-style: normal;
     font-weight: bold;
-    background: #323232;
+    background: navy;
     color: white;
-    border: 1px solid #ede9d9;
+    border: 1px solid navy;    /* #ede9d9 beige */
   }
   
   .digg_pagination a {
     text-decoration: none;
-    color: #323232;
-    border: 1px solid black;
+    color: #2d6a9f;
+    border: 1px solid #2d6a9f;
   }
   
   .digg_pagination a:hover, .digg_pagination a:focus {
-    color: black;
-    border-color: #323232;
+    color: navy;
+    border-color: navy;
   } 
   
   .digg_pagination .page_info {
-    background: #2e6ab1;
+    background: #2e6ab1;   /* dark dusk blue #2e6ab1 */
     color: white;
     padding: 0.4em 0.6em;
     width: 22em;
@@ -48,9 +48,9 @@
   }
   
   .digg_pagination .page_info b {
-      color: #000033;
-      background: #6aa6ed;
-      padding: 0.1em 0.25em;
+      color: #000033;        /* very, very dark blue  - almost black */
+      background: #6aa6ed;   /* medium blue */
+      padding: 0.1em 0.25em;   
   }
   
   .digg_pagination:after {
