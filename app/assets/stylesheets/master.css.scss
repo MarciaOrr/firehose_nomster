@@ -270,6 +270,33 @@
   padding: 8px;
 }
 
+/* --- Profile Page --- */
+.profile {
+  font-family: 'fontinregular', sans-serif;
+  h1 {
+    text-align: center;
+    font-size: 20px;
+    color: navy;
+  }
+  h3, h4 {
+    font-size: 20px;
+  }
+  hr {
+    color: navy;
+    background-color: navy;
+    height: 3px;
+    margin-top: 5px;
+  }
+  .profile-image {
+    margin: auto;
+    width: 265px;
+    height: 265px;
+    border-radius: 100px;
+    padding-bottom: 20px;
+  }
+}
+
+
 /* --- Sticky Footer --- */
 .footer-blurb {
   text-align: center;
