@@ -281,6 +281,7 @@
   h3, h4 {
     font-size: 20px;
   }
+  
   hr {
     color: navy;
     background-color: navy;
@@ -300,6 +301,13 @@
 
   .profile-metrics {
     padding-top: 20px;
+  }
+}
+
+.profile-comments {
+    > blockquote {
+    margin-top: 12px;
+    margin-bottom: 0px;
   }
 }
 
@@ -382,11 +390,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+/* meoHere */
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
+  /* margin: 1.5em 10px;
   padding: 0.5em 10px;
+  */
   quotes: "\201C""\201D""\2018""\2019";
   font-size: 14px;
 }
