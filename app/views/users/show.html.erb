@@ -13,15 +13,49 @@
 </div>
 
 <div class='profile-comments col-xs-12'>
+<div class='comments-heading'>
   <h1 class='text-center'>My Comments</h1>
-  <% @user.comments.each do |comment| %>
-    <div class='col-xs-12 col-sm-6'>
-    <blockquote>
-      <% if comment.humanized_rating.present? %>
-        <b><%= comment.humanized_rating %></b> -
-      <% end %>
-      <%= comment.message %>
-      </blockquote>
-    </div>
-  <% end %>
+  </div>
+
+  <%
+    left_array = []
+    right_array = []
+    half_comments = @user.comments.count / 2
+    if @user.comments.count % 2 != 0
+       half_comments += 1
+    end
+
+    current_comment = 0
+    @user.comments.each do |comment|
+      current_comment += 1
+      if current_comment <= half_comments
+        left_array.push(comment)
+      else
+        right_array.push(comment)
+      end
+    end
+  %>
+
+  <div class='comments-left col-sm-6'>
+    <% left_array.each do |comment| %>
+        <blockquote>
+          <% if comment.humanized_rating.present? %>
+            <b><%= comment.humanized_rating %></b> -
+          <% end %>
+          <%= comment.message %>
+        </blockquote>
+    <% end %>
+  </div>
+  <div class='comments-right col-sm-6'>
+    <% right_array.each do |comment| %>
+        <blockquote>
+          <% if comment.humanized_rating.present? %>
+             <b><%= comment.humanized_rating %></b> -
+           <% end %>
+           <%= comment.message %>
+         </blockquote>
+    <% end %>
+  </div>
+
 </div>
+
