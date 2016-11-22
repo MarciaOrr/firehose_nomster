@@ -287,12 +287,19 @@
     height: 3px;
     margin-top: 5px;
   }
-  .profile-image {
-    margin: auto;
-    width: 265px;
-    height: 265px;
-    border-radius: 100px;
-    padding-bottom: 20px;
+  .profile-picture {
+
+    .profile-image {
+      margin: auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 100px;
+      padding-bottom: 20px;
+   }
+  }
+
+  .profile-metrics {
+    padding-top: 20px;
   }
 }
 
