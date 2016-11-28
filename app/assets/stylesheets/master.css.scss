@@ -305,12 +305,34 @@
 }
 
 .profile-comments {
-  > blockquote {
+  h1 {
+    text-align: center;
+    color: navy;
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .comment-place > h2 {
+    font-size: 20px;
+  }
+
+  blockquote {
+    background: #f9f9eb;
+    border-left: 10px solid #d9b38c;
     margin-top: 12px;
-    margin-bottom: 0px;
+    margin-bottom: 12px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: 14px; 
+  }
+  blockquote:before {
+    color: #d9b38c;
+    content: open-quote;
+    font-size: 56px;
+    line-height: 5px;
+    margin-right: 14 px;
+    vertical-align: -0.4em;
   }
 }
-
 
 /* --- Sticky Footer --- */
 .footer-blurb {

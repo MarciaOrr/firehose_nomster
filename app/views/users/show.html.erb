@@ -14,14 +14,14 @@
 
 <div class='profile-comments col-xs-12'>
   <div class='comments-heading'>
-    <h1 class='text-center' style='color: navy'>My Comments</h1>
+    <h1>My Comments</h1>
   </div>
 
   <% @user.comments.each_with_index do |comment, comment_index| %>
     <% if comment_index % 2 == 0 %>
       <div class='clear'></div>
     <% end %>
-    <div class='col-xs-12 col-sm-6'>
+    <div class='comment-place col-xs-12 col-sm-6'>
       <h2><%= link_to comment.place.name, place_path(comment.place) %></h2>
       <blockquote>
         <% if comment.humanized_rating.present? %>
@@ -31,8 +31,6 @@
       </blockquote>
     </div>
   <% end %>
-
-  
 
 </div>
 
