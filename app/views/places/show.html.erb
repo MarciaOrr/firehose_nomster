@@ -73,44 +73,22 @@
   </div>
   <div class='clear'></div>
 
-  <%
-    left_array = []
-    right_array = []
-    half_comments = @place.comments.count / 2
-    if @place.comments.count % 2 != 0
-       half_comments += 1
-    end
+  <% @place.comments.each_with_index do |comment, comment_index| %>
+    <% if comment_index % 2 == 0 %>
+      <div class='clear'></div>
+    <% end %>
+    <div class='col-xs-12 col-sm-6'>
+      <blockquote>
+        <% if comment.humanized_rating.present? %>
+          <b><%= comment.humanized_rating %></b> -- 
+        <% end %>
+        <%= comment.message %>
+        <small><%= comment.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
 
-    current_comment = 0
-    @place.comments.each do |comment|
-      current_comment += 1
-      if current_comment <= half_comments
-        left_array.push(comment)
-      else
-        right_array.push(comment)
-      end
-    end
-  %>
-  <div class='comments-left col-sm-6'>
-    <% left_array.each do |comment| %>
-        <blockquote>
-          <% if comment.humanized_rating.present? %>
-            <b><%= comment.humanized_rating %></b> -
-          <% end %>
-          <%= comment.message %>
-        </blockquote>
-    <% end %>
-  </div>
-  <div class='comments-right col-sm-6'>
-    <% right_array.each do |comment| %>
-        <blockquote>
-          <% if comment.humanized_rating.present? %>
-             <b><%= comment.humanized_rating %></b> -
-           <% end %>
-           <%= comment.message %>
-         </blockquote>
-    <% end %>
-  </div>
+</div>   <!-- booyah-box for comments -->
 
 <!-- Comments Modal -->
 <div class="modal fade" id="myModalComments" tabindex="-1" role="dialog" aria-labelledby="myModalComments" aria-hidden="true">
