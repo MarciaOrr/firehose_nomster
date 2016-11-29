@@ -1,36 +1,55 @@
-<div class='booyah-box profile'>
-  <div class='profile-picture col-md-4'>
+<div class='booyah-box col-xs-8 col-xs-offset-2 profile-box'>
+  <div class='profile-picture col-md-6'>
     <img src='/assets/profilePicture.jpg' class='profile-image img-responsive'>
     <h1><%= @user.email %></h1>
   </div>
   <div class='profile-metrics col-md-4'>    
     <h3>Member Since: <%= @user.created_at.strftime("%B  %Y") %></h3>
     <hr />
-    <h4> <%=@user.comments.count %> Total Comments</h4> <br />
+    <h4> <%=@user.places.count %> Total Places</h4><br />
+    <h4> <%=@user.comments.count %> Total Reviews</h4> <br />
     <h4> <%=@user.comments.where(rating: '5_star').count %> Five-Star Reviews</h4>
   </div>
   <div class='clear'></div>
 </div>
 
-<div class='profile-comments col-xs-12'>
-  <div class='comments-heading'>
+
+<div class='booyah-box col-xs-12'>
+  <div class='profile-heading'>
     <h1>My Comments</h1>
   </div>
-
-  <% @user.comments.each_with_index do |comment, comment_index| %>
+  <% @comments_sorted = @user.comments.order('rating DESC') %>
+  <% @comments_sorted.each_with_index do |comment, comment_index| %>
     <% if comment_index % 2 == 0 %>
       <div class='clear'></div>
     <% end %>
-    <div class='comment-place col-xs-12 col-sm-6'>
+    <div class='item-heading col-xs-12 col-sm-6'>
       <h2><%= link_to comment.place.name, place_path(comment.place) %></h2>
       <blockquote>
         <% if comment.humanized_rating.present? %>
-          <b><%= comment.humanized_rating %></b>
-        <% end %>
-        <%= comment.message %>
+         <b><%= comment.humanized_rating %></b> -- 
+       <% end %>
+       <%= comment.message %>
       </blockquote>
     </div>
   <% end %>
+</div>
+<div class='clear'></div>
 
+<div class='booyah-box col-xs-12'>
+  <div class='profile-heading'>
+    <h1>My Places</h1>
+  </div>
+  <% @places_sorted = @user.places.order('name ASC') %>
+  <% @places_sorted.each_with_index do |place, place_index| %>
+    <% if place_index % 2 == 0 %>
+      <div class='clear'></div>
+    <% end %>
+    <div class='item-heading col-xs-12 col-sm-6'>
+      <h2><%= link_to place.name, place_path(place) %></h2>
+      <i><%= place.address %></i>
+      <p><%= place.description%> </p>
+    </div>
+  <% end %>
 </div>
 
