@@ -98,11 +98,11 @@
     <!-- last_photo and last_comment defined in place.rb -->
     <div class='place-photo-comment col-xs-12'>
       <% if place.photos.present? %>
-        <div class='col-xs-4'>
+        <div class='col-xs-6 col-sm-4 col-md-4'>
           <img src='<%= place.last_photo.picture %>' class='img-responsive' alt='Last Place Photo' style='max-width: 100%'>
         </div>
         <% if place.comments.present? %>
-          <div class='col-xs-8'>
+          <div class='col-xs-12 col-sm-8 col-md-8'>
             <blockquote>
               <% if place.last_comment.humanized_rating.present? %>
                 <b><%= place.last_comment.humanized_rating %></b>
@@ -133,7 +133,11 @@
   <%= will_paginate @places %>
 </div>
 
-
+/*--- Carousel Slider --- */
+<!-- Code Source
+   Bootstrap 3 Show Many Slide One Carousel
+   https://github.com/rtpHarry/Bootstrap3-ShowManySlideOneCarousel/wiki/Change-the-number-of-slides-visible-at-any-one-time
+-->
 <script type='text/javascript'>
   $('#nomster-carousel').carousel( {interval: 4000} );
 

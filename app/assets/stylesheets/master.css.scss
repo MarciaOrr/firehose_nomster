@@ -1,7 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 /* --- Top Navigation Bar --- */
 .navbar.navbar-inverse {
   background: url('/assets/blue023.jpg');
@@ -56,6 +55,10 @@
 }
 
 /*--- Carousel Slider --- */
+/* Code Source
+   Bootstrap 3 Show Many Slide One Carousel
+   https://github.com/rtpHarry/Bootstrap3-ShowManySlideOneCarousel/wiki/Change-the-number-of-slides-visible-at-any-one-time
+*/
 .carousel
 {
   box-shadow: 0px 3px 8px #2a2a2a;
@@ -189,8 +192,6 @@
       height: 265px;
       width: 100%;
     }
-
-
   }   /* .carousel-inner */
 
 
@@ -208,8 +209,6 @@
   bottom: 0;
   padding-bottom: 10px;
   padding-top: 0;
-
-
 }
 
 /* --- Places Box, User Sign In --- */
@@ -317,7 +316,6 @@
     font-size: 20px;
     font-weight: 500;
   }
-
   > p {
     font-size: 14px;
     margin: 5px 0 12px;
@@ -356,6 +354,9 @@
   margin-top: 0px;
 }
 
+.clear {
+  clear: both;
+}
 
 /* --- ID's --- */
 #map {
@@ -402,7 +403,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -427,7 +427,4 @@ blockquote b {
   font-size: 24px;
 }
 
-.clear {
-  clear: both;
-}
 
