@@ -54,7 +54,7 @@
   flex: 1 0 auto;
 }
 
-/*--- Carousel Slider --- */
+/* --- Carousel Slider --- */
 /* Code Source
    Bootstrap 3 Show Many Slide One Carousel
    https://github.com/rtpHarry/Bootstrap3-ShowManySlideOneCarousel/wiki/Change-the-number-of-slides-visible-at-any-one-time
@@ -287,7 +287,7 @@
     margin-top: 5px;
   }
   .profile-picture {
-
+    word-wrap: break-word;
     .profile-image {
       margin: auto;
       width: 300px;

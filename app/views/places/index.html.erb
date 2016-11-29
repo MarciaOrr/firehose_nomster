@@ -79,7 +79,7 @@
 <% @places.each do |place| %>
   <div class='booyah-box col-xs-10 col-xs-offset-1'>
     <div class='place-info col-xs-12'>
-      <div class='col-xs-6'>
+      <div class='col-xs-12 col-sm-6'>
         <h1><%= link_to place.name, place_path(place) %></h1>
       </div>
       <div class='col-xs-6'>
@@ -133,7 +133,7 @@
   <%= will_paginate @places %>
 </div>
 
-/*--- Carousel Slider --- */
+<!-- Carousel Slider --- -->
 <!-- Code Source
    Bootstrap 3 Show Many Slide One Carousel
    https://github.com/rtpHarry/Bootstrap3-ShowManySlideOneCarousel/wiki/Change-the-number-of-slides-visible-at-any-one-time
